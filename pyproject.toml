@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corrective_rag"
+version = "0.1.0"
+description = "Corrective RAG (Yan et al., 2024): grade retrieval, then refine, fall back to external knowledge, or combine — before generating. From scratch, zero deps."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = []   # zero third-party deps — pure stdlib + OpenAI-compatible HTTP
+
+[project.scripts]
+corrective_rag = "corrective_rag.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["corrective_rag*"]
+
+[tool.setuptools.package-data]
+corrective_rag = ["py.typed"]
