@@ -1,4 +1,4 @@
-.PHONY: help test install clean ask bench
+.PHONY: help test install clean ask bench demo
 
 help:		## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -15,6 +15,9 @@ ask:		## Answer a question: make ask ARGS='"Who wrote Hamlet?" --show-trace'
 
 bench:		## Evaluate answer accuracy + corrective action on the bundled eval set
 	python -m corrective_rag --bench
+
+demo:		## Run the healthcare example (CORRECT / INCORRECT / AMBIGUOUS; offline by default)
+	cd .. && python -m corrective_rag.examples.healthcare.health_demo
 
 clean:		## Remove caches and build artifacts
 	find . -type d -name __pycache__ -prune -exec rm -rf {} + 2>/dev/null || true

@@ -109,6 +109,29 @@ Shakespeare wrote the play Hamlet around 1600. [1]
 (answered via INCORRECT using 1 refined source(s))
 ```
 
+## Example: a healthcare formulary
+
+`examples/healthcare/` shows why the *corrective* step matters in practice. A
+clinical assistant has two knowledge sources — the hospital's indexed **formulary**
+(internal) and a broader external reference (the paper's web search). The demo runs
+the pipeline over both and shows all three actions:
+
+```bash
+make demo        # or: python -m corrective_rag.examples.healthcare.health_demo
+```
+
+- **CORRECT** — "max dose of acetaminophen?" is in the formulary → answer from
+  refined internal knowledge.
+- **INCORRECT** — "aspirin for a child with the flu?" isn't in the formulary → fall
+  back to the external reference (instead of forcing an answer from an irrelevant
+  local page).
+- **AMBIGUOUS** — "ACE inhibitors in pregnancy?" is only grazed internally → combine
+  internal + external.
+
+It runs **live** when a backend is configured, otherwise with a deterministic offline
+critic so the corrective flow is demonstrable with no network. *Illustrative only —
+not medical advice.*
+
 ## Design
 
 Everything that *decides* is pure stdlib and unit-tested offline; only the grading,
