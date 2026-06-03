@@ -146,6 +146,18 @@ corrective actions, and the abstention path, all driven by a scripted fake LLM.
 - **Cost scales with strips.** Grading every document and every strip costs model
   calls; `--max-sources` caps the documents refined into the answer.
 
+## Part of a series
+
+From-scratch, dependency-free reimplementations of LLM-reasoning papers:
+[self_rag](https://github.com/MONISMALIK1/self_rag) ·
+[react_agent](https://github.com/MONISMALIK1/react_agent) ·
+[reflexion](https://github.com/MONISMALIK1/reflexion) ·
+[pal](https://github.com/MONISMALIK1/pal) ·
+[self_consistency](https://github.com/MONISMALIK1/self_consistency) ·
+[self_discover](https://github.com/MONISMALIK1/self_discover) ·
+[tree_of_thoughts](https://github.com/MONISMALIK1/tree_of_thoughts) ·
+**corrective_rag** (this repo).
+
 ## License
 
 MIT
