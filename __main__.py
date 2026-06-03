@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import sys
 
+from . import __version__
 from .core import answer, default_external, default_internal
 from .corpus import EVAL_QUESTIONS, matches
 from .llm import DEFAULT_MODEL
@@ -84,6 +85,7 @@ def main() -> int:
         description="Corrective RAG (Yan et al., 2024): grade retrieval, then refine, "
                     "fall back to external knowledge, or combine — before generating.",
     )
+    p.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     p.add_argument("query", nargs="?", help="The question to answer.")
     p.add_argument("--k", type=int, default=4, help="Passages to retrieve (default: 4).")
     p.add_argument("--max-sources", type=int, default=3,

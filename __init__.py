@@ -11,6 +11,8 @@ https://arxiv.org/abs/2401.15884
 
 from __future__ import annotations
 
+__version__ = "0.1.0"
+
 from .corpus import (EXTERNAL_CORPUS, INTERNAL_CORPUS, Document, QAExample,
                      matches, normalize)
 from .core import (CRAGResult, Source, answer, default_external, default_internal)
@@ -20,6 +22,7 @@ from .refine import into_strips, refine_doc
 from .retriever import BM25Retriever, Retrieved, tokenize
 
 __all__ = [
+    "__version__",
     "Document", "QAExample", "INTERNAL_CORPUS", "EXTERNAL_CORPUS", "matches", "normalize",
     "CRAGResult", "Source", "answer", "default_internal", "default_external",
     "CORRECT", "INCORRECT", "AMBIGUOUS", "GradedDoc", "decide_action", "grade", "parse_score",
