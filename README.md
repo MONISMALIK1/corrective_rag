@@ -179,6 +179,7 @@ From-scratch, dependency-free reimplementations of LLM-reasoning papers:
 [self_consistency](https://github.com/MONISMALIK1/self_consistency) ·
 [self_discover](https://github.com/MONISMALIK1/self_discover) ·
 [tree_of_thoughts](https://github.com/MONISMALIK1/tree_of_thoughts) ·
+[hyde](https://github.com/MONISMALIK1/hyde) ·
 **corrective_rag** (this repo).
 
 ## License
