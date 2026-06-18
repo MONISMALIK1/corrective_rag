@@ -1,6 +1,10 @@
+<p align="center"><img src="assets/hero.svg" alt="Corrective RAG — grade retrieval, then correct it" width="100%"></p>
+
 # corrective_rag
 
 [![tests](https://github.com/MONISMALIK1/corrective_rag/actions/workflows/test.yml/badge.svg)](https://github.com/MONISMALIK1/corrective_rag/actions/workflows/test.yml)
+
+<p align="center"><img src="assets/pipeline.svg" alt="Corrective RAG pipeline: retrieve, grade 0-3, refine or fallback or combine, cited answer" width="100%"></p>
 
 A from-scratch, dependency-free implementation of **Corrective RAG (CRAG)** —
 retrieval-augmented generation that **grades its own retrieval and corrects it**.
